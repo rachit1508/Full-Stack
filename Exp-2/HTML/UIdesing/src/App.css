@@ -1,0 +1,9 @@
+/* src/App.css - Component-specific styles for App.jsx */
+.App {
+  text-align: center;
+}
+
+/* Optional: Custom styles for the card or form (Material UI handles defaults) */
+.card-custom {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
