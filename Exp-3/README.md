@@ -1,22 +1,67 @@
+
+# LAB MANUAL  
+## Unit–3: Implementing Routing in Single Page Applications (SPA)
+
+This repository contains three experiments demonstrating routing concepts in React Single Page Applications using React Router.
+
+---
+
+## Experiment–1: Basic Client-Side Routing Using React Router
+
+### Aim  
+To implement basic client-side routing in a Single Page Application using React Router.
+
+### Software Requirements  
+- Node.js  
+- React  
+- React Router DOM  
+- Web Browser  
+
+### Theory  
+Routing in a Single Page Application allows navigation between different views without reloading the entire web page. React Router is a widely used library that enables client-side routing in React applications. It uses components such as BrowserRouter, Routes, and Route to define navigation paths and map them to corresponding components. This improves user experience by providing faster transitions and dynamic content rendering.
 <img width="1393" height="583" alt="image" src="https://github.com/user-attachments/assets/c855b91d-20db-4c2c-8526-7868406eeb3b" />
-Bootstrap Purpose: Demonstrates integrating Vite with Bootstrap to prototype responsive layouts quickly. Contents: A Vite project scaffold, index.html, and a simple component structure in src showcasing grid, navbar, and utility classes. Experiments: Tested Bootstrap CDN vs. local npm install, examined theming by overriding CSS variables, and compared performance between compiled and dev modes. Learnings: How to scope Bootstrap styles to avoid global collisions and how to combine Bootstrap with custom CSS modules. Notes: Useful as a quick UI prototype; keep vendor CSS minimal to reduce bundle size. Files of interest: App.jsx and public/index.html demonstrate Bootstrap usage.
+### Procedure  
+1. Create a React application.  
+2. Install the react-router-dom package.  
+3. Wrap the application with BrowserRouter.  
+4. Define routes using Routes and Route components.  
+5. Navigate between pages without page reload.  
 
-<img width="972" height="625" alt="image" src="https://github.com/user-attachments/assets/56202ccb-690e-41ce-b8a7-a19c53ae10f9" />card Purpose: Small playground for card components and visual styling patterns. Contents: Multiple card variations (image top, side-by-side, with footer), CSS demos in App.css, and small layout experiments. Experiments: Explored shadow/light modes, hover interactions, and image aspect handling with object-fit. Learnings: Best practices for accessible card markup, focus states, and responsive breakpoints for cards. Notes: Intended as a component reference for reuse across other projects. Files of interest: App.jsx, App.css.
+---
 
-ComLib Purpose: Component library experiment to centralize reusable UI pieces. Contents: Small set of components (buttons, inputs, badges) with consistent props and style tokens. Experiments: Prop-driven theming, API surface design, and packaging components for reuse across projects. Learnings: Component API ergonomics, default props vs. CSS-only variants, and lightweight documentation patterns. Notes: Not published—kept local; consider moving to a mono-repo or npm package later. Files of interest: src components folder.
+## Experiment–2: Navigation Using Link Component
 
-FormSPA Purpose: Single-page app focused on form handling, validation, and UX patterns. Contents: Forms with controlled inputs, client-side validation, and example submission flows. Experiments: Implemented both simple validators and schema-based validation (pattern demonstration), and used debounced input checks. Learnings: UX for inline errors, preventing double submissions, and basic accessibility improvements for forms (aria attributes). Notes: Good reference for future signup/login forms; consider integrating a validation lib if complexity grows. Files of interest: App.jsx, src/components/* form pieces.
+### Aim  
+To implement navigation links in a Single Page Application using the React Router Link component.
 
-LinkNav Purpose: Explore link navigation behaviors and router link patterns. Contents: Small demos showing Link, NavLink, anchor fallback, and programmatic navigation. Experiments: Compared NavLink active styles, hash vs. pathname navigation, and external link handling. Learnings: How to maintain active state, accessibility of link text, and when to prefer programmatic navigation. Notes: Useful reference for routing style guidelines in other SPAs. Files of interest: main.jsx, App.jsx (navigation examples).
+### Theory  
+The Link component in React Router enables navigation between different routes without refreshing the page. Unlike traditional anchor tags, the Link component prevents full page reloads and maintains SPA behavior. It updates the URL and renders the associated component dynamically. This ensures smooth and efficient navigation within the application.
+<img width="972" height="625" alt="image" src="https://github.com/user-attachments/assets/56202ccb-690e-41ce-b8a7-a19c53ae10f9" />card Purpose: Small playground 
+### Procedure  
+1. Import the Link component from react-router-dom.  
+2. Create navigation links for different routes.  
+3. Use the to attribute to define target paths.  
+4. Verify smooth navigation without page reload.  
 
-MultiSPARouting Purpose: Demonstrates multiple SPA routing techniques and nested route patterns. Contents: A Vite app with multiple routes (/, /dashboard) and simple page components. Experiments: Implemented nested routes, Link navigation, and asset imports (images/SVG). Also tested route-based code-splitting ideas. Learnings: How BrowserRouter, Routes, and Route compose; pitfalls with JSX syntax (fixed an img duplication in App.jsx). Notes: The routing demo is minimal and intended for teaching route structure; can be expanded with lazy loading. Files of interest: App.jsx (fixed JSX), assets for images.
+---
 
-RoutingSPA Purpose: A deeper SPA routing example covering dynamic routes, params, and protected routes patterns. Contents: Multiple pages, sample protected route logic, and route guards for basic auth flows. Experiments: Simulated auth context to gate routes, used route params for detail pages, and tested 404 handling. Learnings: Patterns for route protection, location-based redirects, and structuring route config for scalability. Notes: Good starting point for apps requiring auth + nested routing; integrate real auth provider later. Files of interest: pages, App.jsx routing config.
+## Experiment–3: Multi-Page SPA Using Routing
 
+### Aim  
+To create a multi-page Single Page Application using client-side routing.
+
+### Theory  
+A multi-page SPA simulates multiple pages within a single application by dynamically rendering components based on the URL path. React Router enables this functionality through route mapping. Each component is associated with a specific path, and navigation between components occurs without reloading the browser. This approach enhances performance and provides a seamless user experience.
 <img width="1019" height="728" alt="image" src="https://github.com/user-attachments/assets/2e382741-3aa2-4558-bfba-e63060849835" />
 
-Simple Purpose: Minimal starter app to test Vite, JSX, and basic asset loading without extra dependencies. Contents: Barebones index.html, main.jsx, and a single App.jsx with trivial markup. Experiments: Fast feedback loop for testing framework upgrades and small CSS experiments. Learnings: Useful for isolating issues—if a bug appears here, it's likely infra-related. Notes: Keep it tiny; use for reproducing minimal test cases. Files of interest: main.jsx, App.jsx.
+### Procedure  
+1. Create multiple components representing different pages.  
+2. Map each component to a specific route.  
+3. Implement navigation using routing components.  
+4. Test navigation between pages without refreshing the browser.  
 
-SPA Purpose: Larger SPA example combining routing, assets, and multiple pages into a demo application. Contents: Pages, shared components, assets, and a slightly richer layout than the minimal examples. Experiments: Tested layout composition, global state patterns, and asset optimizations in Vite build. Learnings: How to structure a mid-size SPA; tradeoffs between centralized state vs. local state per page. Notes: Serves as an integration playground; consider adding tests and CI for stability. Files of interest: pages, components, vite.config.js.
+---
 
-UIDesign Purpose: Visual and UI experimentation—color systems, spacing, and component visuals. Contents: Style explorations, mockups, and working prototypes of UI components with CSS focus. Experiments: Design tokens, CSS variables, and different layout systems (flex vs. grid). Learnings: How small token systems make theme changes easier; recommended CSS organization strategies. Notes: Treat as a design system seed for future component libraries. Files of interest: src styles and pattern files.
+
+
+
