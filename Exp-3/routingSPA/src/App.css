@@ -1,0 +1,115 @@
+/* Global Reset + Smooth Design Token */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f0f9ff);
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 16px 0;
+  margin-bottom: 40px;
+}
+
+/* Navbar Links */
+.navbar a {
+  position: relative;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: #1d4ed8;
+  transition: 0.3s ease;
+}
+
+/* Modern hover underline animation */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  border-radius: 20px;
+  background: #1e40af;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Page Content */
+.page {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #334155;
+  padding: 10px 0;
+}
+
+/* Card-style sections if needed */
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .navbar a {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 18px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
