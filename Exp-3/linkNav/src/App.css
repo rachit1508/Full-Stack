@@ -1,0 +1,27 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.nav-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fa0e80;
+  color: rgba(233, 244, 236, 0.949);
+  transition: background-color 0.5s ease;
+}
+
+.nav-container button:hover {
+  background-color: #b90b42;
+}
+
+.page {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 24px;
+}
